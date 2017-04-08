@@ -7,9 +7,10 @@ import { AboutPage } from '../pages/about/about';
 import {WorkoutsPage} from '../pages/workouts/workouts';
 import {AddWorkoutPage} from '../pages/addWorkout/addWorkout';
 import { TabsPage } from '../pages/tabs/tabs';
-
+import {HttpModule} from '@angular/http';
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
+
 
 @NgModule({
   declarations: [
@@ -21,7 +22,8 @@ import { SplashScreen } from '@ionic-native/splash-screen';
   ],
   imports: [
     BrowserModule,
-    IonicModule.forRoot(MyApp)
+    IonicModule.forRoot(MyApp),
+    HttpModule
   ],
   bootstrap: [IonicApp],
   entryComponents: [
