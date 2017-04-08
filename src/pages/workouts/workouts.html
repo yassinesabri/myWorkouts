@@ -5,5 +5,10 @@
 </ion-header>
 
 <ion-content padding>
-  <h2>Welcome to myApp!</h2>
+  <h2>Current Workouts</h2>
+  <ion-list>
+    <button ion-item *ngFor="let workout of workouts" (click)="selectedWorkout($event,workout)">
+      {{workout.title}}
+    </button>
+  </ion-list>
 </ion-content>

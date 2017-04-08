@@ -10,6 +10,7 @@ import { TabsPage } from '../pages/tabs/tabs';
 import {HttpModule} from '@angular/http';
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
+import {WorkoutDetailsPage} from '../pages/workout-details/workout-details';
 
 
 @NgModule({
@@ -18,7 +19,8 @@ import { SplashScreen } from '@ionic-native/splash-screen';
     AboutPage,
     TabsPage,
     WorkoutsPage,
-    AddWorkoutPage
+    AddWorkoutPage,
+    WorkoutDetailsPage
   ],
   imports: [
     BrowserModule,
@@ -31,7 +33,8 @@ import { SplashScreen } from '@ionic-native/splash-screen';
     AboutPage,
     TabsPage,
     WorkoutsPage,
-    AddWorkoutPage
+    AddWorkoutPage,
+    WorkoutDetailsPage
   ],
   providers: [
     StatusBar,

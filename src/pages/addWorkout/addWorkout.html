@@ -7,5 +7,29 @@
 </ion-header>
 
 <ion-content padding>
-
+  <form (submit)="onSubmit()">
+    <ion-list>
+      <ion-item>
+        <ion-label>Title</ion-label>
+        <ion-input [(ngModel)]="title" type="text" name="title"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label>Note</ion-label>
+        <ion-input [(ngModel)]="note" type="textarea" name="note"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label>Type</ion-label>
+        <ion-select [(ngModel)]="type" name="type">
+          <ion-option value="Jogging">Jogging</ion-option>
+          <ion-option value="Free Weights">Free Weights</ion-option>
+          <ion-option value="Hiking">Hiking</ion-option>
+          <ion-option value="Aerobic">Aerobic</ion-option>
+          <ion-option value="Yuga">Yuga</ion-option>
+        </ion-select>
+      </ion-item>
+      <ion-item>
+        <button ion-button class="button-block">Add Workout</button>
+      </ion-item>
+    </ion-list>
+  </form>
 </ion-content>
