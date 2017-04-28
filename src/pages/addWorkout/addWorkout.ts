@@ -2,9 +2,10 @@
  * Created by sabri on 4/8/2017.
  */
 import { Component } from '@angular/core';
-import { NavController } from 'ionic-angular';
+import { NavController ,App} from 'ionic-angular';
 import {WorkoutService } from '../../services/workout.service';
-import {WorkoutsPage} from '../workouts/workouts';
+//import {WorkoutsPage} from '../workouts/workouts';
+import {TabsPage} from '../tabs/tabs';
 
 @Component({
   selector: 'page-add-workout',
@@ -16,7 +17,7 @@ export class AddWorkoutPage {
   note:any;
   type:any;
   result:any;
-  constructor(public navCtrl: NavController,private workoutService:WorkoutService) {
+  constructor(public navCtrl: NavController,private workoutService:WorkoutService,public app: App) {
 
   }
   onSubmit(){
@@ -31,6 +32,7 @@ export class AddWorkoutPage {
     this.workoutService.addWorkout(workout).subscribe(data => {
       this.result = data;
     },() => console.log('Workout Added'));
-    this.navCtrl.setRoot(WorkoutsPage);
+    this.app.getRootNav().setRoot(TabsPage);
+    //this.navCtrl.setRoot(WorkoutsPage);
   }
 }
